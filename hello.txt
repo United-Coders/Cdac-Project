@@ -1,3 +1,9 @@
 I AM AKASH CHAUDHARI
 
+<<<<<<< HEAD
 Krishna somwanshi here.
+=======
+
+
+This is Amit's Branch
+>>>>>>> f2c2fd67b661c248e55d0f53829b913ed3ac7e48
