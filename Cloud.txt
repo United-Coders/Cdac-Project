@@ -1,10 +1,7 @@
 why cloud is trending now days?
 
-Basically Cloud provides computing devices on rent.
-
-we know that for cloud we have to pay as we go.
-
-we can create upon necessity.
-
-
-
+1)Basically Cloud provides computing devices on rent.
+2)we know that for cloud we have to pay as we go.
+3)We have to pay for it at starting and take this to you and use it. User is responsible for you.
+4)maintainance, security and electricity bill are taken care by vendor.
+5)Hardware is expensive rather cloud will be more cheaper.
