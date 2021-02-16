@@ -1,0 +1,40 @@
+<app-librarianheader></app-librarianheader>
+
+<h2 class=" text-center" style="padding-top:70px"> Books List</h2>
+<table class="table table-striped" >
+    <thead >
+        <tr >
+            <!-- <th>BookId</th> -->
+            
+            <th>Bookname</th>
+            <th>AuthorName</th>
+            <th>BookRent</th>
+            <th>BookPrice</th>
+            <th>Edition</th>
+            <th>Description</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Books of books" style="background-color:skyblue ;">
+            <!-- <td> {{ Books.bookId }} </td> -->
+            <td> {{ Books.bookname }} </td>
+            <td> {{ Books.authorName }} </td>
+            <td> {{ Books.bookRent }} </td>
+            <td> {{ Books.bookPrice }} </td>
+            <td> {{ Books.edition }} </td>
+            <td> {{ Books.description }} </td>
+           
+            <td class="">
+                
+                <button (click)="updateBooks(Books.bookId)" class="btn btn-info"> Update</button>
+                <button (click)="deleteBooks(Books.bookId)" class="btn btn-danger" style="margin-left: 10px">
+                    Delete</button>
+                <button (click)="booksDetails(Books.bookId)" class="btn btn-info" style="margin-left: 10px">
+                    View</button>
+            </td>
+     
+        </tr>
+    </tbody>
+</table>

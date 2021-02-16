@@ -1,0 +1,119 @@
+<app-librarianheader></app-librarianheader>
+    <!-- <h3>Spring Boot Email Sending Application</h3>
+
+<!-- Text Email form -->
+
+<!--<section class="signup">
+    <div class="container">
+        <div class="signup-content">
+            <div class="signup-form">
+                <h3 class="form-title">Text Email Form</h3>
+                <form modelAttribute="textEmail" method="POST" action="/email-app/sendTextEmail" cssClass="register-form" id="register-form">
+                    <div class="form-group">
+                        <label for="fname"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                        <input path="name" name="name" [(ngModel)]="contact.name" id="name" placeholder="Name" required="required" />
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="phone"><i class="zmdi zmdi-phone"></i></label>
+                        <input path="phone" name="phone" [(ngModel)]="contact.phone" id="phone" placeholder="Phone" required="required" />
+                      
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><i class="zmdi zmdi-email"></i></label>
+                        <input type="email" path="email" name="email" [(ngModel)]="contact.email" id="email" placeholder="Email" required="required" />
+                     
+                    </div>
+                    <div class="form-group">
+                        <label for="subject"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                        <input path="subject" name="subject" [(ngModel)]="contact.subject" id="subject" placeholder="Subject" required="required" />
+                  
+                    </div>
+                    <div class="form-group">
+                        <textarea path="comment" name="comment" [(ngModel)]="contact.comment" id="comment" placeholder="Comment" rows="5" cols="35" required="required" ></textarea>
+                    </div>
+                
+                    <div class="text-left mb-3">
+                        <button type="submit" class="btn btn-bg-success" (click)="sendText(contact)" value="send">Send</button>
+                    </div>
+                </form>
+            </div>
+            <div class="signup-image">
+                <figure>
+                    <img src="/assets/signup.jpg" alt="sing up image">
+                </figure>
+                <div style="display: flex; justify-content: space-between;">	
+                <a href="${pageContext.request.contextPath}/email-app/attachment-email" class="signup-image-link">Send Email With Attachment</a>
+                <a href="${pageContext.request.contextPath}/email-app/home" class="signup-image-link">Go Home</a> 
+            </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+
+<div class="bg-contact100" style="background-image: url('/assets/bg-01.jpg');padding-top:50px;" >
+    <div class="container-contact100">
+        <div class="wrap-contact100">
+            <div class="contact100-pic js-tilt" data-tilt>
+                <img src="/assets/img-01.png" alt="IMG">
+            </div>
+
+            <form class="contact100-form validate-form">
+                <span class="contact100-form-title">
+                    Get in touch with You For Reminders
+                </span>
+
+                <div class="wrap-input100 validate-input" data-validate = "Name is required">
+                    <input class="input100" type="text" name="name" [(ngModel)]="contact.name" placeholder="Name">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate = "Name is required">
+                    <input class="input100" type="text" name="phone" [(ngModel)]="contact.phone" placeholder="Days OF Renting is remaining">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+
+
+                <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                    <input class="input100" type="text" name="email" [(ngModel)]="contact.email" placeholder="Email">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                    <input class="input100" type="text" name="subject" [(ngModel)]="contact.subject" placeholder="Subject">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate = "Message is required">
+                    <textarea class="input100" name="comment" [(ngModel)]="contact.comment" placeholder="Message"></textarea>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="container-contact100-form-btn">
+                    <button class="contact100-form-btn" (click)="sendText(contact)">
+                        Send
+                    </button>
+                </div>
+
+                <div class="container-contact100-form-btn">
+                    <a href="librarianhome">Back To Home</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<app-userheader></app-userheader>
+<div class="container-fluid" style="background-image: url(https://images.unsplash.com/photo-1495294926616-f282c4219dfc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzB8fHVwbG9hZCUyMHBpY3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60); background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;">
+    <div class="row d-flex justify-content-center align-items-center " style="height: 100vh;">
+        <div class="col d-flex justify-content-center align-items-center">
+            <form (ngSubmit)="upload()">
+              <h1 class="text-dark text-center">Select your profile pic :</h1>   <br>
+                <input type="file" name="f" (change)="handleFile($event)" class="" /> <br /><br>
+                <button class="btn btn-success w-60"type="submit">Upload</button> 
+            </form>
+        </div>
+    </div>
+</div>
+
+

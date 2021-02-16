@@ -1,0 +1,75 @@
+<app-header></app-header>
+<div class="limiter" style="padding-top: 50px;">
+    <div class="container-login100">
+        <div class="wrap-login100">
+           
+            <form class="login100-form validate-form " #registerForm="ngForm" novalidate>
+                <div style="position: absolute;top: 17%;right: 25%;">
+                    <img src="assets/logo.png" alt="logo" style="border-radius: 50px;height: 100px;width: 100px;">
+                </div>
+                <span class="login100-form-title p-b-34" style="font-weight: 50px;font-size: 30px;">
+                   <u>Librarian Login</u>
+                </span>
+                <div class="w-100">
+                <div class=" validate-input m-b-20 form-group" data-validate="Type user name"  >
+                    <input id="email" class="input100 w-100 " [(ngModel)]="librarian.email" type="text" name="email" placeholder="Enter Email" required #email="ngModel" minlength="6" maxlength="50"
+                    [class.is-invalid]="email.invalid && email.touched"  email>
+                    <span class="focus-input50"></span>
+                    <span *ngIf="email.errors && (email.invalid && email.touched)">
+                        <div class="text-danger" *ngIf="email.errors.required">Enter Your Email
+                        </div>
+                        <div class="text-danger" *ngIf="email.errors.pattern">use this format
+                            abc@email.com
+                        </div>
+                    </span>
+                </div>
+                </div>
+            
+            <div class="w-100 ">
+                <div class="validate-input m-b-20  form-group" data-validate="Type password">
+                    <input class="input100 " [(ngModel)]="librarian.password" type="password" name="pass" placeholder="Password" required
+                    #password="ngModel" minlength="8" maxlength="15" pattern="[a-zA-Z0-9@#$%]+"
+                                [class.is-invalid]="password.invalid && password.touched" appPasswordPattern>
+                    <span class="focus-input50"></span>
+                    <span *ngIf="password.errors && (password.invalid && password.touched)">
+                        <div class="text-danger" *ngIf="email.errors.required">
+                            Password is required
+                        </div>
+                        <div class="text-danger" *ngIf="password.errors.pattern">
+                            Password should have minimum 8 characters, at least 1 uppercase letter, 1
+                            lowercase
+                            letter and 1 number
+                        </div>
+                    </span>
+                </div>
+            </div>
+
+            <div align="center" style="color: #ff0000;">{{mssg}}</div>
+
+                <div class="container-login100-form-btn">
+                    <input type="submit" (click)="LoginValidate1(librarian)" class="login100-form-btn" value="Sign In">
+                        
+                    
+                </div>
+
+                <div class="w-full text-center p-t-27 p-b-100" >
+                    <span class="txt1" style="font-size: 22px;">
+                        Forgot
+                    </span>
+
+                    <a href="libforget" class="txt2" style="font-size: 22px;">
+                         password?
+                    </a>
+                </div>
+
+                <div class="w-full text-center">
+                    <a href="libregister" class="txt3" style="font-size: 22px;">
+                        Sign Up
+                    </a>
+                </div>
+            </form>
+
+            <div class="login100-more" style="background-image: url('assets/fa.jpg');"></div>
+        </div>
+    </div>
+</div>

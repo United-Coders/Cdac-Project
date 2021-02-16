@@ -1,0 +1,41 @@
+<app-librarianheader></app-librarianheader>
+
+<div class="col-md-6 offset-md-3" style="padding-top:70px">
+    <h3> Add Book</h3>
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label> Bookname </label>
+            <input type="text" class="form-control" id="Bookname" [(ngModel)]="bookss.bookname" name="Bookname">
+        </div>
+
+        <div class="form-group">
+            <label> AuthorName </label>
+            <input type="text" class="form-control" id="AuthorName" [(ngModel)]="bookss.authorName" name="AuthorName">
+        </div>
+
+        <div class="form-group">
+            <label> BookRent </label>
+            <input type="text" class="form-control" id="BookRent" [(ngModel)]="bookss.bookRent" name="BookRent">
+        </div>
+
+        <div class="form-group">
+            <label> BookPrice </label>
+            <input type="text" class="form-control" id="BookPrice" [(ngModel)]="bookss.bookPrice" name="BookPrice">
+        </div>
+
+        <div class="form-group">
+            <label> Edition</label>
+            <input type="text" class="form-control" id="edition" [(ngModel)]="bookss.edition" name="edition">
+        </div>
+
+        <div class="form-group">
+            <label> Description </label>
+            <input type="text" class="form-control" id="description" [(ngModel)]="bookss.description"
+                name="description">
+        </div>
+
+        <button class="btn btn-success" type="submit">Submit</button>
+
+    </form>
+</div>

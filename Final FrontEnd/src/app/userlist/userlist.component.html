@@ -1,0 +1,39 @@
+<p>userlist works!</p>
+<app-librarianheader></app-librarianheader>
+
+<h2 class=" text-center text-success" style="padding-top:70px"> Users List</h2>
+<table class="table table-striped" >
+    <thead style="color:rgb(228, 231, 23);background-color:rgb(118, 33, 197)">
+        <tr >
+            <!-- <th>BookId</th> -->
+            
+            <th>UserFirstname</th>
+            <th>UserLastname</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Operations</th>
+           
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Users of users" style="background-color:skyblue ;">
+            <!-- <td> {{ Books.bookId }} </td> -->
+            <td> {{ Users.firstname }} </td>
+            <td> {{ Users.lastname }} </td>
+            <td> {{ Users.email }} </td>
+            <td> {{ Users.contact }} </td>
+           
+            <td class="">
+                
+               <!-- // <button (click)="updateBooks(Books.bookId)" class="btn btn-info"> Update</button> -->
+                <button (click)="deleteUsers(Users.userId)" class="btn btn-danger" style="margin-left: 10px">
+                    Delete</button>
+                <!-- <button (click)="usersDetails(Users.userId)" class="btn btn-info" style="margin-left: 10px">
+                    View</button> -->
+            </td>
+     
+        </tr>
+    </tbody>
+</table>

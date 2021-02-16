@@ -1,0 +1,120 @@
+<app-header></app-header>
+
+<div class="limiter">
+    <div class="container-login100">
+        <div class="login100-more" style="background-image: url('assets/adminbg.jpg');"></div>
+
+        <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
+            <form  #registerForm="ngForm" novalidate>
+                <span class="login100-form-title p-b-59 text-center text-info">
+                    <u> Admin Registration</u>
+                </span>
+
+                <div class="wrap-input100 validate-input form-group">
+                    <span class="text-danger"
+                    *ngIf="(fname.touched || registerForm.submitted) && fname.errors?.required">
+                    FName required
+                </span>
+                    <span class="label-input100">First Name</span>
+                    <input class="input100" #fname="ngModel" [(ngModel)]="admin.firstName" type="text" name="firstName"
+                        placeholder="firstName... ">
+                    <span class="focus-input50"></span>
+                   
+                </div>
+
+                <div class="wrap-input100 validate-input form-group">
+                    <span class="text-danger"
+                        *ngIf="(lname.touched || registerForm.submitted) && lname.errors?.required">
+                        LName required
+                    </span>
+                    <span class="label-input100">Last Name</span>
+                    <input class="input100" #lname="ngModel" [(ngModel)]="admin.lastName" type="text" name="lastName"
+                        placeholder="lastName...">
+                    <span class="focus-input50"></span>
+
+                </div>
+
+                <div class="wrap-input100 validate-input form-group"
+                    data-validate="Valid email is required: ex@abc.xyz">
+                    <span class="label-input100">Email</span>
+                    <input class="input100" [(ngModel)]="admin.email" type="text" name="email"
+                        placeholder="Email address..." #email="ngModel" minlength="6" maxlength="50"
+                        [class.is-invalid]="email.invalid && email.touched" email>
+                    <span class="focus-input50"></span>
+                    <span *ngIf="email.errors && (email.invalid && email.touched)">
+                        <div class="text-warning" *ngIf="email.errors.required">Enter Your Email
+                        </div>
+                        <div class="text-warning" *ngIf="email.errors.pattern">use this format
+                            abc@email.com
+                        </div>
+                    </span>
+                </div>
+
+                <div class="wrap-input100 validate-input form-group" data-validate="Password is required">
+                    <span class="label-input100">Password</span>
+                    <input class="input100" [(ngModel)]="admin.password" type="password" name="password"
+                        placeholder="Enter Password" #password="ngModel" minlength="8" maxlength="15"
+                        pattern="[a-zA-Z0-9@#$%]+" [class.is-invalid]="password.invalid && password.touched"
+                        appPasswordPattern>
+                    <span class="focus-input50"> <span *ngIf="password.errors && (password.invalid && password.touched)">
+                        <div class="text-warning" *ngIf="email.errors.required">
+                            Password is required
+                        </div>
+                        <div class="text-warning" *ngIf="password.errors.pattern">
+                            Password should have minimum 8 characters, at least 1 uppercase letter, 1
+                            lowercase
+                            letter and 1 number
+                        </div>
+                    </span></span>
+                   
+                </div>
+
+
+                <div class="wrap-input100 validate-input form-group" data-validate="Repeat Password is required">
+                    <span class="label-input100">Phone</span>
+                    <input class="input100" [(ngModel)]="admin.phone" type="text" name="phone" placeholder="Phone..."
+                        required #ngoContact="ngModel" minlength="8" maxlength="15">
+                    <span class="focus-input50"></span>
+                    <span class="text-warning"
+                        *ngIf="(ngoContact.touched || registerForm.submitted) && ngoContact.errors?.required">
+                        Contact is required
+                    </span>
+                </div>
+
+                <div class="flex-m w-full p-b-33">
+                    <div class="contact100-form-checkbox">
+                        <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                        <label class="label-checkbox100" for="ckb1">
+                            <span class="txt1">
+                                I agree to the
+                                <a href="" class="txt2 hov1">
+                                    Terms of User
+                                </a>
+                            </span>
+                        </label>
+                    </div>
+
+
+                </div>
+
+                <div class="col-10 p-0">
+                    <div align="center" style="color: #ff0000;">{{mssg}}</div>
+                </div>
+
+                <div class="container-login100-form-btn">
+                    <div class="wrap-login100-form-btn">
+                        <div class="login100-form-bgbtn"></div>
+                        <button class="login100-form-btn" (click)="RegisterAdmin(admin)" value="submit" type="submit">
+                            Sign Up
+                        </button>
+                    </div>
+
+                    <a href="adminlogin" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
+                        Sign in
+                        <i class="fa fa-long-arrow-right m-l-5"></i>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

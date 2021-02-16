@@ -1,0 +1,40 @@
+<app-adminheader></app-adminheader>
+<h2 class=" text-center" style="padding-top:70px"> Librarian List</h2>
+<table class="table table-striped" >
+    <thead style="background-color: #42A5F5;">
+        <tr >
+            <!-- <th>BookId</th> -->
+            
+            <th>Librarian Name</th>
+            <th>Licence Number</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Address</th>
+            <th>Actions</th>
+            
+            
+           
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Librarian of librarian" style="background-color:#6ecfbf ;">
+            <!-- <td> {{ Books.bookId }} </td> -->
+            <td> {{ Librarian.name }} </td>
+            <td> {{ Librarian.licence_no }} </td>
+            <td> {{ Librarian.email }} </td>
+            <td> {{ Librarian.phone }} </td>
+            <td> {{ Librarian.address }} </td>
+           
+            <td class="">
+                
+               <!-- // <button (click)="updateBooks(Books.bookId)" class="btn btn-info"> Update</button> -->
+                <button (click)="deleteLib(Librarian.lib_id)" class="btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <!-- <button (click)="usersDetails(Users.userId)" class="btn btn-info" style="margin-left: 10px">
+                    View</button> -->
+            </td>
+     
+        </tr>
+    </tbody>
+</table>

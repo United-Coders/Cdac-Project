@@ -1,0 +1,52 @@
+<!-- <body>
+    <div class="container">
+    
+    <div class="row justify-content-center align-items-center col-md-12">
+    <h1>comment here</h1>
+    </div>
+    <div class="col-md-12 ">
+    <textarea [(ngModel)] = "comment"></textarea>
+    </div>
+    <button  class="btn btn-info btn-md" (click)="post()"> Comment</button>
+    <hr>
+    <div *ngFor = "let comments of postComment">
+        <div> {{comments}}</div>
+      <hr>
+    </div>
+    </body>
+     -->
+    
+    
+    <div class="card text-center w-60" style="background-color: rgb(168, 236, 236);padding-bottom: 50px;">
+        <div class="row " >
+            <div class="col-2"> <img src="https://www.asme.org/getmedia/c2c8ea5a-b690-4ba7-92bb-34bd1432862b/book_guide_hero_books.png?width=300&height=315&ext=.png" width="70" class="rounded-circle mt-2"> </div>
+            <div class="col-10">
+                <div class="comment-box ml-2">
+                    <h4>Add a comment</h4>
+                    <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label> </div>
+                    <div class="comment-area"> <textarea class="form-control" placeholder="what is your view?" [(ngModel)] = "comment" rows="4"></textarea> </div>
+                    <div class="comment-btns mt-2">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="pull-left"> <button class="btn btn-success btn-sm"  (click)="reset()">Cancel</button> </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="pull-right"> <button class="btn btn-success send btn-sm" (click)="post()">comment <i class="fa fa-long-arrow-right ml-1"></i></button> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngFor = "let comments of postComment" style="padding-right: 20px;">
+                    <hr>
+                    <div class="p-3"> {{comments}}</div>
+                    <button class="btn btn-sm  btn-info"  (click)="remove(comments);">Delete</button>
+                  <hr>
+                </div>
+
+
+                </div>
+
+    </div>
+ </div>
+    

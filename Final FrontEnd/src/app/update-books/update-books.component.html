@@ -1,0 +1,38 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Update Book</h3>
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label> Bookname </label>
+            <input type="text" class="form-control" id="bookname" [(ngModel)]="books.bookname" name="Bookname">
+        </div>
+
+        <div class="form-group">
+            <label> AuthorName </label>
+            <input type="text" class="form-control" id="authorName" [(ngModel)]="books.authorName" name="AuthorName">
+        </div>
+
+        <div class="form-group">
+            <label> BookRent </label>
+            <input type="text" class="form-control" id="bookRent" [(ngModel)]="books.bookRent" name="BookRent">
+        </div>
+
+        <div class="form-group">
+            <label> BookPrice </label>
+            <input type="text" class="form-control" id="bookPrice" [(ngModel)]="books.bookPrice" name="BookPrice">
+        </div>
+
+        <div class="form-group">
+            <label> Edition</label>
+            <input type="text" class="form-control" id="edition" [(ngModel)]="books.edition" name="edition">
+        </div>
+
+        <div class="form-group">
+            <label> Description </label>
+            <input type="text" class="form-control" id="description" [(ngModel)]="books.description" name="description">
+        </div>
+
+        <button class="btn btn-success" type="submit">Submit</button>
+
+    </form>
+</div>

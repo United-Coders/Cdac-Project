@@ -1,0 +1,80 @@
+<app-header></app-header>
+<section class="get-in-touch">
+    <h1 class="title">Get in touch
+        with Library
+    </h1>
+
+    <h3 class="second">Register your Library
+    </h3>
+    <form class="contact-form row" #registerForm="ngForm" novalidate>
+       <div class="form-field col-lg-6 form-group" >
+          <input id="name" [(ngModel)]="librarian.name" class="input-text js-input"  #name="ngModel" name="name" type="text" required>
+          <label class="label" for="name">Library Name</label>
+          <span class="text-danger"
+                                    *ngIf="(name.touched || registerForm.submitted) && name.errors?.required">
+                                    Name is required
+                                </span>
+       </div>
+       <div class="form-field col-lg-6 form-group">
+          <input id="email" [(ngModel)]="librarian.email" class="input-text js-input" name="email" type="email" #email="ngModel" minlength="6" maxlength="50"
+          [class.is-invalid]="email.invalid && email.touched" required email>
+          <label class="label" for="email">E-mail</label>
+          <span *ngIf="email.errors && (email.invalid && email.touched)">
+            <div class="text-danger" *ngIf="email.errors.required">Please Enter Your Email
+            </div>
+            <div class="text-danger" *ngIf="email.errors.pattern">Please use this format
+                abc@email.com
+            </div>
+        </span>
+       </div>
+       <div class="form-field col-lg-6 form-group">
+          <input id="password" [(ngModel)]="librarian.password" class="input-text js-input" name="password" type="password" required #password="ngModel" minlength="8" maxlength="15" pattern="[a-zA-Z0-9@#$%]+"
+          [class.is-invalid]="password.invalid && password.touched" appPasswordPattern>
+          <label class="label" for="password">Password</label>
+          <span *ngIf="password.errors && (password.invalid && password.touched)">
+            <div class="text-danger" *ngIf="email.errors.required">
+                Password is required
+            </div>
+            <div class="text-danger" *ngIf="password.errors.pattern">
+                Password should have minimum 8 characters, at least 1 uppercase letter, 1
+                lowercase
+                letter and 1 number
+            </div>
+        </span>
+       </div>
+        <div class="form-field col-lg-6 form-group">
+          <input id="phone" [(ngModel)]="librarian.phone" class="input-text js-input" name="phone" type="text" required #ngoContact="ngModel" minlength="8" maxlength="15">
+          <label class="label" for="phone">Phone</label>
+          <span class="text-danger"
+          *ngIf="(ngoContact.touched || registerForm.submitted) && ngoContact.errors?.required">
+          Contact is required
+      </span>
+       </div>
+       <div class="form-field col-lg-6 form-group">
+        <input id="phone" [(ngModel)]="librarian.licence_no" class="input-text js-input" name="licence_no" type="text" required #Contact="ngModel" minlength="8" maxlength="15">
+        <label class="label" for="phone">Licence No.</label>
+        <span class="text-danger"
+        *ngIf="(Contact.touched || registerForm.submitted) && Contact.errors?.required">
+        licence_no is required
+    </span>
+     </div>
+
+     <div class="form-field col-lg-6 form-group ">
+        <input id="phone" [(ngModel)]="librarian.address" class="input-text js-input"  #aname="ngModel" name="address"  type="text" required>
+        <label class="label" for="phone">Address</label>
+        <span class="text-danger"
+                                    *ngIf="(aname.touched || registerForm.submitted) && aname.errors?.required">
+                                    Address is required
+                                </span>
+     </div>
+       
+     <div class="col-10 p-0">
+      <div align="center" style="color: #ff0000;">{{mssg}}</div>
+  </div>
+
+       <div class="form-field col-lg-12">
+          <input class="submit-btn" (click)="RegisterLibrarian1(librarian)" type="submit" value="Submit">
+       </div>
+    </form>
+ </section>
+ 

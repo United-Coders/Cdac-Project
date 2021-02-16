@@ -1,0 +1,53 @@
+<app-userheader></app-userheader>
+
+
+
+<h2 class="bg-info text-center" style="padding-top:70px"> Books List</h2>
+
+<div style="margin-left: 30%;">
+    <input class="form-control " style="width: 50%; height: 40px;border-color:black ;" type="text"
+        [(ngModel)]="search" autocomplete="off" placeholder="Search Book" />
+
+</div>
+
+<table class="table table-striped">
+    <thead class="bg-success">
+        <tr class="">
+            <!-- <th>BookId</th> -->
+            
+            <th>Bookname</th>
+            <th>AuthorName</th>
+            <th>BookRent</th>
+            <th>BookPrice</th>
+            <th>Edition</th>
+            <th>Description</th>
+            <th>Actions</th>
+
+
+        </tr>
+    </thead>
+
+    
+    <tbody>
+        <tr *ngFor="let Books of Bookss | filter : search" style="background-color:skyblue ;">
+            <!-- <td> {{ Books.bookId }} </td> -->
+            <td> {{ Books.bookname }} </td>
+            <td> {{ Books.authorName }} </td>
+            <td> {{ Books.bookRent }} </td>
+            <td> {{ Books.bookPrice }} </td>
+            <td> {{ Books.edition }} </td>
+            <td> {{ Books.description }} </td>
+           
+           
+            <td class="">
+                
+              <button (click)="cartAdd(Books)" class="btn btn-danger"> Add to cart</button> 
+                
+                    
+                <!--<button (click)="employeeDetails(employee.id)" class="btn btn-info" style="margin-left: 10px">
+                    View</button>-->
+            </td>
+       
+        </tr>
+    </tbody>
+</table>

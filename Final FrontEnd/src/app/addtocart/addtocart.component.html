@@ -1,0 +1,45 @@
+<app-userheader></app-userheader>
+
+<h3 class="text-center"> View Books Details</h3>
+<div class="">
+    <div class="row h-100vh">
+        <div class="col-6 text-center">
+            <div>
+                <img src="/assets/books/dracula.jpg" alt="dracula" style="height:350px;width: 250px;padding-top:50px">
+            </div>
+        </div>
+        <div class="col-6 text-left" style="padding-top:80px">
+
+
+            <div>
+                <label> <b> Book Name: </b></label> {{books.bookname}}
+            </div>
+            <div>
+                <label> <b> Author Name: </b></label> {{books.authorName}}
+            </div>
+            <div>
+                <label> <b>Book Rent: </b></label> {{books.bookRent}}
+            </div>
+            <div>
+                <label> <b>Book Price: </b></label> {{books.bookPrice}}
+            </div>
+            <div>
+                <label> <b>Book Edition: </b></label> {{books.edition}}
+            </div>
+            <div>
+                <label> <b>Book Description: </b></label> {{books.description}}
+            </div>
+            <div style="padding-left: 120px;padding-top:50px"><a href="http://localhost:8787/"><button class="btn btn-outline-success">Proceed To Payment</button></a> </div>
+            <!-- <button  (click)="payment()">Payment</button> -->
+        </div>
+    </div>
+
+
+    <div class="row d-flex justify-content-center align-items-center " style="padding-top:70px; padding-bottom:70px;">
+
+
+
+    </div>
+
+</div>
+<app-comment></app-comment>
